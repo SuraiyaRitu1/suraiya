@@ -198,12 +198,36 @@
             Obtenir une consultation gratuite
           </h3>
         <form name="contact" method="POST" data-netlify="true">
+  <!-- Hidden input to identify the form -->
   <input type="hidden" name="form-name" value="contact">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
+
+  <!-- Name Field -->
+  <label for="name" class="form-label">Nom complet</label>
+  <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+  <!-- Phone Field -->
+  <label for="phone" class="form-label">Numéro de téléphone</label>
+  <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" required>
+
+  <!-- Email Field -->
+  <label for="email" class="form-label">Adresse email</label>
+  <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+
+  <!-- Subject Field -->
+  <label for="subject" class="form-label">Sujet</label>
+  <input type="text" id="subject" name="subject" placeholder="Décrivez votre projet" required>
+
+  <!-- Message Field -->
+  <label for="message" class="form-label">Votre message</label>
+  <textarea id="message" name="message" placeholder="Comment nous pouvons vous aider ?" rows="4" required></textarea>
+
+  <!-- Hidden Input for Redirect -->
   <input type="hidden" name="redirect" value="/thank-you.html">
-  <button type="submit">Submit</button>
+
+  <!-- Submit Button -->
+  <button type="submit" class="submit-btn">Valider ma demande</button>
 </form>
+
 
       
 
