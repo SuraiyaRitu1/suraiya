@@ -199,51 +199,37 @@
           </h3>
        <form name="contact" method="POST" data-netlify="true" class="contact-form-style-03" data-netlify-honeypot="bot-field">
   
-  <!-- Netlify Hidden Fields -->
+  <!-- Hidden field to specify the form name (for Netlify) -->
   <input type="hidden" name="form-name" value="contact">
-  <input type="hidden" name="bot-field">
+  <input type="hidden" name="bot-field"> <!-- Honeypot to prevent bots -->
 
-  <div class="contact-form-success alert alert-success d-none mt-4">
-    <strong>Succès!</strong> Votre message a été envoyé avec succès.
-  </div>
-
-  <div class="contact-form-error alert alert-danger d-none mt-4" style="background-color: #a3cfbb; border-color: rgb(2, 167, 2); color: black;">
-    <strong>Erreur!</strong> Votre message n'a pas pu être envoyé.
-    <span class="mail-error-message text-1 d-block"></span>
-  </div>
-
-  <label for="exampleInputName" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Nom complet</label>
+  <label for="name" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Nom complet</label>
   <div class="position-relative form-group mb-20px">
     <span class="form-icon"><i class="bi bi-emoji-smile text-dark-gray"></i></span>
-    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" 
-           id="exampleInputName" type="text" name="name" placeholder="Entrez votre nom" required>
+    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="name" type="text" name="name" placeholder="Entrez votre nom" required>
   </div>
 
-  <label for="exampleInputPhone" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Numéro de téléphone</label>
+  <label for="phone" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Numéro de téléphone</label>
   <div class="position-relative form-group mb-20px">
     <span class="form-icon"><i class="bi bi-telephone text-dark-gray"></i></span>
-    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" 
-           id="exampleInputPhone" type="tel" name="phone" placeholder="Entrez votre numéro de téléphone">
+    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="phone" type="tel" name="phone" placeholder="Entrez votre numéro de téléphone" required>
   </div>
 
-  <label for="exampleInputEmail" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Adresse email</label>
+  <label for="email" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Adresse email</label>
   <div class="position-relative form-group mb-20px">
     <span class="form-icon"><i class="bi bi-envelope text-dark-gray"></i></span>
-    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" 
-           id="exampleInputEmail" type="email" name="email" placeholder="Entrez votre adresse email" required>
+    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="email" type="email" name="email" placeholder="Entrez votre adresse email" required>
   </div>
 
-  <label for="exampleInputSubject" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Sujet</label>
+  <label for="subject" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Sujet</label>
   <div class="position-relative form-group mb-20px">
     <span class="form-icon"><i class="bi bi-journals text-dark-gray"></i></span>
-    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" 
-           id="exampleInputSubject" type="text" name="subject" placeholder="Décrivez votre projet">
+    <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="subject" type="text" name="subject" placeholder="Décrivez votre projet" required>
   </div>
 
-  <label for="exampleInputMessage" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Votre message</label>
+  <label for="message" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Votre message</label>
   <div class="position-relative form-group form-textarea mb-0">
-    <textarea class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control" 
-              id="exampleInputMessage" name="text" placeholder="Comment nous pouvons vous aider ?" rows="2" required></textarea>
+    <textarea class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control" name="message" id="message" placeholder="Comment nous pouvons vous aider ?" rows="2" required></textarea>
     <span class="form-icon"><i class="bi bi-chat-square-dots text-dark-gray"></i></span>
   </div>
 
@@ -254,11 +240,17 @@
         Valider ma demande
       </button>
     </div>
-    <div class="col-12 mt-20px mb-0 text-center text-md-start">
-      <div class="form-results d-none"></div>
-    </div>
+  </div>
+  
+  <!-- Success and error message -->
+  <div class="contact-form-success alert alert-success d-none mt-4">
+    <strong>Succès!</strong> Votre message a été envoyé avec succès.
   </div>
 
+  <div class="contact-form-error alert alert-danger d-none mt-4" style="background-color: #a3cfbb; border-color: rgb(2, 167, 2); color: black;">
+    <strong>Erreur!</strong> Votre message n'a pas pu être envoyé.
+    <span class="mail-error-message text-1 d-block"></span>
+  </div>
 </form>
 
 
