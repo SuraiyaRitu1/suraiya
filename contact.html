@@ -266,41 +266,41 @@
           </form>
           
           <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const form = document.querySelector('form[name="contact"]');
-              const successMessage = document.querySelector(".contact-form-success");
-              const errorMessage = document.querySelector(".contact-form-error");
+            // document.addEventListener("DOMContentLoaded", function () {
+            //   const form = document.querySelector('form[name="contact"]');
+            //   const successMessage = document.querySelector(".contact-form-success");
+            //   const errorMessage = document.querySelector(".contact-form-error");
 
-              form.addEventListener("submit", function (event) {
-                event.preventDefault();
+            //   form.addEventListener("submit", function (event) {
+            //     event.preventDefault();
 
-                // Check honeypot field to prevent spam submissions
-                const honeypot = form.querySelector('input[name="bot-field"]').value;
-                if (honeypot) {
-                  return;
-                }
+            //     // Check honeypot field to prevent spam submissions
+            //     const honeypot = form.querySelector('input[name="bot-field"]').value;
+            //     if (honeypot) {
+            //       return;
+            //     }
 
-                fetch("/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: new URLSearchParams(new FormData(form)).toString(),
-                })
-                  .then((response) => {
-                    if (response.ok) {
-                      successMessage.classList.remove("d-none");
-                      errorMessage.classList.add("d-none");
-                      form.reset(); // Reset form after successful submission
-                    } else {
-                      throw new Error("Network response was not ok.");
-                    }
-                  })
-                  .catch((error) => {
-                    successMessage.classList.add("d-none");
-                    errorMessage.classList.remove("d-none");
-                    console.error("There has been a problem with your fetch operation:", error);
-                  });
-              });
-            });
+            //     fetch("/", {
+            //       method: "POST",
+            //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            //       body: new URLSearchParams(new FormData(form)).toString(),
+            //     })
+            //       .then((response) => {
+            //         if (response.ok) {
+            //           successMessage.classList.remove("d-none");
+            //           errorMessage.classList.add("d-none");
+            //           form.reset(); // Reset form after successful submission
+            //         } else {
+            //           throw new Error("Network response was not ok.");
+            //         }
+            //       })
+            //       .catch((error) => {
+            //         successMessage.classList.add("d-none");
+            //         errorMessage.classList.remove("d-none");
+            //         console.error("There has been a problem with your fetch operation:", error);
+            //       });
+            //   });
+            // });
           </script>
 
         </div>
