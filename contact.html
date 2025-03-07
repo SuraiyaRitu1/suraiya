@@ -317,7 +317,8 @@
             </div>
           
           </form>
-            <script>
+            
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contact-form-style-03");
     const successMessage = document.querySelector(".contact-form-success");
@@ -336,8 +337,9 @@
           if (response.ok) {
             successMessage.classList.remove("d-none"); // Show success message
             form.reset(); // Reset the form fields
+            successMessage.scrollIntoView({ behavior: "smooth", block: "center" }); // Scroll to message
             setTimeout(() => {
-              successMessage.classList.add("d-none"); // Hide after a few seconds
+              successMessage.classList.add("d-none"); // Hide after 5 seconds
             }, 5000);
           } else {
             throw new Error("Submission failed");
@@ -345,13 +347,15 @@
         })
         .catch(() => {
           errorMessage.classList.remove("d-none"); // Show error message
+          errorMessage.scrollIntoView({ behavior: "smooth", block: "center" }); // Scroll to message
           setTimeout(() => {
-            errorMessage.classList.add("d-none"); // Hide after a few seconds
+            errorMessage.classList.add("d-none"); // Hide after 5 seconds
           }, 5000);
         });
     });
   });
 </script>
+
 
           </div>
         </div>
