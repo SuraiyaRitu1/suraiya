@@ -197,24 +197,73 @@
           <h3 class="text-dark-gray ls-minus-2px fw-700">
             Obtenir une consultation gratuite
           </h3>
-  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form-style-03">
-        <input type="hidden" name="form-name" value="contact">
-    
-        <!-- Honeypot field to prevent spam -->
-        <input type="hidden" name="bot-field" />
+<form name="contact" method="POST" data-netlify="true" class="contact-form-style-03"
+            data-netlify-honeypot="bot-field">
 
-        
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" required></textarea>
-    
-        <button type="submit">Envoyer</button>
-    </form>
+            <div class="contact-form-success alert alert-success d-none mt-4">
+              <strong>Succès!</strong> Votre message a été envoyé avec succès.
+            </div>
+
+            <div class="contact-form-error alert alert-danger d-none mt-4" style="
+                  background-color: #a3cfbb;
+                  border-color: rgb(2, 167, 2);
+                  color: black;
+              ">
+              <strong>Erreur!</strong> Votre message n'a pas pu être envoyé.
+              <span class="mail-error-message text-1 d-block"></span>
+            </div>
+            <input type="hidden" name="bot-field" />
+
+            <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Nom
+              complet</label>
+            <div class="position-relative form-group mb-20px">
+              <span class="form-icon"><i class="bi bi-emoji-smile text-dark-gray"></i></span>
+              <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="exampleInputEmail1" type="text" name="name" placeholder="Entrez votre nom">
+            </div>
+            <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Numéro de
+              téléphone</label>
+            <div class="position-relative form-group mb-20px">
+              <span class="form-icon"><i class="bi bi-telephone text-dark-gray"></i></span>
+              <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="exampleInputEmail2" type="tel" name="phone" placeholder="Entrez votre numéro de téléphone">
+            </div>
+            <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Adresse
+              email</label>
+            <div class="position-relative form-group mb-20px">
+              <span class="form-icon"><i class="bi bi-envelope text-dark-gray"></i></span>
+              <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="exampleInputEmail3" type="email" name="email" placeholder="Entrez votre adresse email">
+            </div>
+            <label for="exampleInputEmail1"
+              class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Sujet</label>
+            <div class="position-relative form-group mb-20px">
+              <span class="form-icon"><i class="bi bi-journals text-dark-gray"></i></span>
+              <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="exampleInputEmail4" type="text" name="subject" placeholder="Décrivez votre projet">
+            </div>
+            <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Votre
+              message</label>
+            <div class="position-relative form-group form-textarea mb-0">
+              <textarea class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control"
+                name="text" placeholder="Comment nous pouvons vous aider ?" rows="2"></textarea>
+              <span class="form-icon"><i class="bi bi-chat-square-dots text-dark-gray"></i></span>
+            </div>
+            <div class="row mt-25px align-items-center">
+              <div class="col-xl-7 col-lg-12 col-sm-7 lg-mb-30px md-mb-0"></div>
+              <div class="col-xl-5 col-lg-12 col-sm-5 text-center text-sm-end text-lg-start text-xl-end xs-mt-25px">
+                <!-- <input id="exampleInputEmail5" type="hidden" name="redirect" value=""> -->
+                <button class="btn btn-dark-gray btn-medium btn-round-edge btn-box-shadow submit" type="submit"
+                  style="margin-left: 0; display: block">
+                  Valider ma demande
+                </button>
+              </div>
+              <div class="col-12 mt-20px mb-0 text-center text-md-start">
+                <div class="form-results d-none"></div>
+              </div>
+            </div>
+
+          </form>
 
 
         </div>
