@@ -198,7 +198,7 @@
             Obtenir une consultation gratuite
           </h3>
 
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form-style-03">
+ <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form-style-03">
         <input type="hidden" name="form-name" value="contact">
     
         <!-- Honeypot field to prevent spam -->
@@ -218,6 +218,7 @@
             <strong>Erreur!</strong> Votre message n'a pas pu être envoyé.
             <span class="mail-error-message text-1 d-block"></span>
         </div>
+
         <label for="name" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Nom
             complet</label>
         <div class="position-relative form-group mb-20px">
@@ -226,11 +227,33 @@
                 id="name" type="text" name="name" placeholder="Entrez votre nom" required>
         </div>
 
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="phone" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Numéro de
+            téléphone</label>
+        <div class="position-relative form-group mb-20px">
+            <span class="form-icon"><i class="bi bi-telephone text-dark-gray"></i></span>
+            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="phone" type="tel" name="phone" placeholder="Entrez votre numéro de téléphone" required>
+        </div>
+        <label for="email" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Adresse
+            email</label>
+        <div class="position-relative form-group mb-20px">
+            <span class="form-icon"><i class="bi bi-envelope text-dark-gray"></i></span>
+            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="email" type="email" name="email" placeholder="Entrez votre adresse email" required>
+        </div>
+        <label for="subject" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Sujet</label>
+        <div class="position-relative form-group mb-20px">
+            <span class="form-icon"><i class="bi bi-journals text-dark-gray"></i></span>
+            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                id="subject" type="text" name="subject" placeholder="Décrivez votre projet" required>
+        </div>
+        <label for="message" class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">Votre
+            message</label>
+        <div class="position-relative form-group form-textarea mb-0">
+            <textarea class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control" name="text"
+                placeholder="Comment nous pouvons vous aider ?" rows="2"></textarea>
+            <span class="form-icon"><i class="bi bi-chat-square-dots text-dark-gray"></i></span>
+        </div>
     
         <button type="submit">Envoyer</button>
     </form>
